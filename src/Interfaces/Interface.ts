@@ -1,5 +1,4 @@
 export type Advice = {
-        id: number,
-        advice: string
+    id: number,
+    advice: string
 }
-

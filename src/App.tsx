@@ -4,8 +4,7 @@ import AdviceComponent from './Components/AdviceComponent';
 
 function App() {
   return (
-    <div className='container flex justify-center'>
-      <h1 className='underline text-center'>Hello there</h1>
+    <div className='container mx-auto my-auto'>
       <AdviceComponent />
     </div>
   );
