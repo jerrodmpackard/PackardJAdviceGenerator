@@ -6,6 +6,7 @@ import { HiOutlineArrowRight } from 'react-icons/hi';
 
 const AdviceComponent = () => {
     const [advice, setAdvice] = useState<Advice>();
+    const [newAdvice, setNewAdvice] = useState(true);
 
     useEffect(() => {
         const adviceData = async () => {
@@ -15,7 +16,11 @@ const AdviceComponent = () => {
         }
 
         adviceData();
-    }, []);
+    }, [newAdvice]);
+
+    const getNewAdvice = () => {
+        setNewAdvice(!newAdvice);
+    }
 
 
     return (
@@ -33,7 +38,7 @@ const AdviceComponent = () => {
 
                 <div className="grid justify-center">
                 <Button pill>
-                    <HiOutlineArrowRight className="h-6 w-6" />
+                    <HiOutlineArrowRight onClick={getNewAdvice} className="h-6 w-6" />
                 </Button>
             </div>
             </Card>
