@@ -26,18 +26,18 @@ const AdviceComponent = () => {
     return (
         <div className='grid justify-center content-center '>
 
-            <Card href="#" className="max-w-lg border-none background">
-                <h5 className="text-xl text-center mt-6 font-bold tracking-tight text-green-400">
+            <Card className="max-w-lg border-none background">
+                <h5 className="text-xl text-center mt-6 font-bold tracking-tight neonGreenColor">
                     ADVICE #{advice && advice.id}
                 </h5>
-                <p className="text-3xl text-center my-10 text-gray-700 dark:text-gray-400">
+                <p className="text-[28px] text-center my-10 textColor">
                     "{advice && advice.advice}"
                 </p>
 
                 <img src={lineImg} alt='line' />
 
                 <div className="grid justify-center">
-                    <Button color='blue' onClick={getNewAdvice} className='rounded-full' ><img src={dice} alt='dice' /></Button>
+                    <Button onClick={getNewAdvice} className='rounded-full h-20 w-20 neonGreenBackground glow-button off' ><img src={dice} alt='dice' /></Button>
                 </div>
             </Card>
 

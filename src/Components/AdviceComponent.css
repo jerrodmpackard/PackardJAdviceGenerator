@@ -1,3 +1,21 @@
 .background {
     background-color: hsl(217, 19%, 38%);
 }
+
+.neonGreenColor {
+    color: hsl(150, 100%, 66%);
+}
+
+.neonGreenBackground {
+    background-color: hsl(150, 100%, 66%);
+
+}
+
+.textColor {
+    color: hsl(193, 38%, 86%);
+}
+
+.glow-button:hover {
+    color: hsl(150, 100%, 66%);
+    box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
+}
