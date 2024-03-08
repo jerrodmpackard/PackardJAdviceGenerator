@@ -4,7 +4,7 @@ import AdviceComponent from './Components/AdviceComponent';
 
 function App() {
   return (
-    <div className='container mx-auto my-auto'>
+    <div className='flex place-content-center darkBackground'>
       <AdviceComponent />
     </div>
   );

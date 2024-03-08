@@ -2,7 +2,9 @@ import React, { useEffect, useState } from 'react'
 import getData from '../DataServices/DataServices';
 import { Advice } from '../Interfaces/Interface';
 import { Button, Card } from 'flowbite-react';
-import { HiOutlineArrowRight } from 'react-icons/hi';
+import lineImg from '../Assets/pattern-divider-desktop.svg';
+import dice from '../Assets/icon-dice.svg';
+import './AdviceComponent.css'
 
 const AdviceComponent = () => {
     const [advice, setAdvice] = useState<Advice>();
@@ -11,7 +13,6 @@ const AdviceComponent = () => {
     useEffect(() => {
         const adviceData = async () => {
             const fetchedData = await getData();
-            console.log(fetchedData)
             setAdvice(fetchedData);
         }
 
@@ -22,27 +23,24 @@ const AdviceComponent = () => {
         setNewAdvice(!newAdvice);
     }
 
-
     return (
-        <div className='grid justify-center'>
+        <div className='grid justify-center content-center '>
 
-            <Card href="#" className="max-w-lg mx-auto my-auto">
+            <Card href="#" className="max-w-lg border-none background">
                 <h5 className="text-xl text-center mt-6 font-bold tracking-tight text-green-400">
-                ADVICE #{advice && advice.id}
+                    ADVICE #{advice && advice.id}
                 </h5>
                 <p className="text-3xl text-center my-10 text-gray-700 dark:text-gray-400">
-                "{advice && advice.advice}"
+                    "{advice && advice.advice}"
                 </p>
 
-                <img src='./src/Assets/pattern-divider-mobile.svg' />
+                <img src={lineImg} alt='line' />
 
                 <div className="grid justify-center">
-                <Button pill>
-                    <HiOutlineArrowRight onClick={getNewAdvice} className="h-6 w-6" />
-                </Button>
-            </div>
+                    <Button color='blue' onClick={getNewAdvice} className='rounded-full' ><img src={dice} alt='dice' /></Button>
+                </div>
             </Card>
-            
+
         </div>
     )
 }
